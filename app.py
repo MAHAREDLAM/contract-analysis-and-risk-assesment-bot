@@ -1,4 +1,12 @@
 import streamlit as st
+st.markdown("""
+<style>
+button, input, textarea {
+    font-size: 12px !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
 from utils import read_file, split_clauses
 from risk_rules import analyze_risks
 from reportlab.lib.pagesizes import A4
@@ -82,4 +90,5 @@ if uploaded_file:
         file_name="contract_risk_report.pdf",
         mime="application/pdf"
     )
+
 
